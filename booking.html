@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{BUSINESS_NAME}} – Book Appointment</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">{{BUSINESS_NAME}}</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="booking.html">Book</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-light py-5 text-center">
+  <div class="container">
+    <h1 class="display-6 fw-bold">Book an Appointment</h1>
+    <p class="lead">Complete the form below—we’ll confirm your slot instantly.</p>
+  </div>
+</header>
+
+<section class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <form id="bookingForm" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name*</label>
+          <input type="text" class="form-control" id="name" required>
+          <div class="invalid-feedback">Please enter your name.</div>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">Phone*</label>
+          <input type="tel" class="form-control" id="phone" required>
+          <div class="invalid-feedback">Phone number required.</div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email (optional)</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">Service Address*</label>
+          <input type="text" class="form-control" id="address" required>
+          <div class="invalid-feedback">Address required.</div>
+        </div>
+        <div class="mb-3">
+          <label for="issue" class="form-label">Describe the Issue*</label>
+          <textarea class="form-control" id="issue" rows="4" required></textarea>
+          <div class="invalid-feedback">Brief description needed.</div>
+        </div>
+        <div class="mb-3">
+          <label for="preferredTime" class="form-label">Preferred Date & Time*</label>
+          <input type="datetime-local" class="form-control" id="preferredTime" required>
+          <div class="invalid-feedback">Select a preferred slot.</div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Submit</button>
+      </form>
+
+      <div id="formAlert" class="alert d-none mt-4" role="alert"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-primary text-white text-center py-4">
+  <p class="mb-0">© <span id="year"></span> {{BUSINESS_NAME}}. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
