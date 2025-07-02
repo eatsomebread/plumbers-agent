@@ -1,7 +1,20 @@
-body { 
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+:root{
+ --accent:#00A7A7;
+ --bg:#f7f7f7;
+ --dark:#222;
+ --mid:#555;
 }
-.card-title {
-  font-weight: 600;
-}
-#year::before { content: attr(data-year); }
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--dark);scroll-behavior:smooth;}
+section{padding:4rem 0}
+.navbar-brand{font-weight:600}
+.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:#111;color:#fff;position:relative;overflow:hidden;}
+.hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;margin-bottom:1rem}
+.hero p{font-size:1.25rem;color:#ddd}
+.btn-accent{background:var(--accent);border:none}
+.btn-accent:hover{background:#008f8f}
+.card{border:0;border-radius:.75rem;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:transform .3s}
+.card:hover{transform:translateY(-6px)}
+.fade-in{opacity:0;transform:translateY(40px);transition:all .6s ease-out}
+.fade-in.show{opacity:1;transform:none}
+footer{background:#111;color:#aaa;text-align:center;padding:2rem 0;font-size:.875rem}
