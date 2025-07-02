@@ -1,20 +1,31 @@
 :root{
- --accent:#00A7A7;
- --bg:#f7f7f7;
- --dark:#222;
- --mid:#555;
+  --accent:#009ea8;
+  --accent-dark:#007e86;
+  --bg-top:#fafbfc;
+  --bg-alt:#f0f2f4;
+  --text:#222;
+  --text-light:#555;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--dark);scroll-behavior:smooth;}
-section{padding:4rem 0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Roboto,Arial,sans-serif;color:var(--text);background:var(--bg-top);}
+section{padding:4.5rem 0}
+h1,h2,h3,h4{font-weight:700;line-height:1.2}
 .navbar-brand{font-weight:600}
-.hero{min-height:90vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:#111;color:#fff;position:relative;overflow:hidden;}
-.hero h1{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;margin-bottom:1rem}
-.hero p{font-size:1.25rem;color:#ddd}
-.btn-accent{background:var(--accent);border:none}
-.btn-accent:hover{background:#008f8f}
-.card{border:0;border-radius:.75rem;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:transform .3s}
+.btn-accent{background:var(--accent);border:none;color:#fff}
+.btn-accent:hover{background:var(--accent-dark)}
+.hero{
+  background:linear-gradient(135deg,#1a1d21 0%,#2a2d32 100%);
+  color:#fff;display:flex;align-items:center;min-height:88vh;padding-top:4rem;
+}
+.feature-badge{
+  display:flex;gap:.75rem;align-items:flex-start;margin-bottom:1.25rem;
+}
+.feature-badge i{
+  flex-shrink:0;width:16px;height:16px;border-radius:50%;background:var(--accent);margin-top:.3rem;
+}
+.card{border:0;border-radius:.75rem;background:var(--bg-alt);padding:2rem;box-shadow:0 2px 6px rgba(0,0,0,.04);transition:transform .35s}
 .card:hover{transform:translateY(-6px)}
-.fade-in{opacity:0;transform:translateY(40px);transition:all .6s ease-out}
-.fade-in.show{opacity:1;transform:none}
-footer{background:#111;color:#aaa;text-align:center;padding:2rem 0;font-size:.875rem}
+.fade{opacity:0;transform:translateY(40px);transition:all .7s ease-out}
+.fade.show{opacity:1;transform:none}
+footer{background:#1a1d21;color:#aaa;text-align:center;padding:2.5rem 0;font-size:.9rem}

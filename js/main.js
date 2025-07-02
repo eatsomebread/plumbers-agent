@@ -1,10 +1,10 @@
-// Fade‑in animation
-const io=new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('show');io.unobserve(x.target);}})},{threshold:.2});
-document.querySelectorAll('.fade-in').forEach(el=>io.observe(el));
+// Scroll-fade
+const io=new IntersectionObserver((a)=>{a.forEach(b=>{if(b.isIntersecting){b.target.classList.add('show');io.unobserve(b.target);}})},{threshold:.15});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
 
-// Placeholder for agent widget
-function loadAgentWidget(){
-  /* Replace with actual chat/agent snippet */
-  console.log("Agent widget placeholder loaded.");
+// Placeholder for widget
+function loadBookingWidget(){
+  /* Replace with your live booking widget snippet here */
+  console.log("Booking widget placeholder loaded.");
 }
-if(document.getElementById('widgetHook')) loadAgentWidget();
+if(document.getElementById('bookingWidget')) loadBookingWidget();
